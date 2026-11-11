@@ -20,12 +20,23 @@
 <body>
 <main>
 <h1>ElektroKit Gizlilik Politikası</h1>
-<p class="muted">Son güncelleme: 9 Kasım 2026 · Geliştirici: Abiyonik Tech</p>
+<p class="muted">Son güncelleme: 11 Kasım 2026 · Geliştirici: Abiyonik Tech</p>
 
 <p>ElektroKit (<code>com.abiyoniktech.elektrokit</code>) elektronik hesaplamaları için bir Android uygulamasıdır. Bu sayfa uygulamanın hangi verileri nasıl kullandığını açıklar.</p>
 
 <h2>Bizim topladığımız veriler</h2>
-<p>Uygulamanın bizim işlettiğimiz bir sunucusu yoktur ve size ait kişisel verileri biz toplamayız. Hesap açma, giriş ya da kayıt yoktur. Yalnızca şu bilgiler <strong>cihazınızda</strong> tutulur: uygulamayı ilk açtığınız tarih, günlük reklam, tarama ve yapay zekâ soru sayaçları, reklamsız süre bitiş zamanı, favori ve son kullanılan araçlarınız, tema tercihiniz. Bunlar cihazdan dışarı çıkmaz ve uygulamayı kaldırınca silinir.</p>
+<p>Hesap açma ya da giriş yoktur. Uygulamanın internete gönderdiği bilgiler aşağıda ("Kullanım yoklaması ve uzaktan iptal") tek tek yazılıdır; bunun dışında size ait veri bize gönderilmez. Yalnızca şu bilgiler <strong>cihazınızda</strong> tutulur: lisans anahtarınız, lisans süresi denetimi için son doğrulanan tarih bilgisi, günlük yapay zekâ soru sayacı, kaydettiğiniz hesaplar, favori ve son kullanılan araçlarınız, tema tercihiniz. Bunlar cihazdan dışarı çıkmaz ve uygulamayı kaldırınca silinir.</p>
+
+<h2>Lisans ve cihaz kodu</h2>
+<p>ElektroKit lisanslı bir uygulamadır. Uygulama, Android'in bu uygulamaya özel cihaz kimliğinden (ANDROID_ID) <strong>tek yönlü bir özet</strong> alarak bir "cihaz kodu" üretir ve ekranda gösterir; asıl kimlik bu koddan geri çıkarılamaz. Lisans almak için cihaz kodunu siz kendi isteğinizle (e-posta, mesaj vb.) bize iletirsiniz.</p>
+<p>Lisans verirken şu bilgileri lisans kayıt defterimizde tutarız: cihaz kodu, adınız ve (verdiyseniz) şirket/okul adınız, telefon numaranız, e-posta adresiniz, lisans numarası, veriliş ve bitiş tarihleri ve lisansı veren yetkili. Bu kayıtlar yalnızca lisansınızı yönetmek, yenilemek ve destek vermek için kullanılır; satılmaz, reklam için kullanılmaz ve yasal zorunluluk dışında üçüncü kişilerle paylaşılmaz. Kaydınızın silinmesini ya da düzeltilmesini aşağıdaki e-posta adresinden isteyebilirsiniz. Lisans doğrulaması cihaz üzerinde, internetsiz yapılır.</p>
+
+<h2>Kullanım yoklaması ve uzaktan iptal</h2>
+<p>Lisanslı uygulama her açıldığında, internet varsa, lisans yönetimi için Google Firebase (Cloud Firestore, Avrupa sunucuları) üzerindeki lisans kayıt sistemimize şu bilgileri gönderir: <strong>lisans numarası, cihaz kodu, uygulama sürümü, ilk ve son açılış zamanı ve açılış sayısı</strong>. Ad, telefon, konum, rehber, fotoğraf ya da uygulama içinde yaptığınız hesaplamalar gönderilmez. Bu bilgiler yalnızca lisansın kullanılıp kullanılmadığını izlemek, destek vermek ve kötüye kullanımı önlemek için kullanılır ve yalnızca lisans yetkililerimiz tarafından görülebilir.</p>
+<p>Aynı açılışta uygulama, lisans numarasının iptal edilip edilmediğini sorar. İptal edilmiş bir lisans (örneğin iade, sözleşme ihlali ya da kötüye kullanım hâlinde) internet bağlantısından sonra çalışmaz. İnternet yoksa bu işlemler yapılmaz ve lisans çevrimdışı çalışmaya devam eder. Kayıtların silinmesini aşağıdaki e-posta adresinden isteyebilirsiniz; lisans sona erdikten sonra yoklama kayıtları en geç 1 yıl içinde silinir.</p>
+
+<h2>Tarih doğrulaması</h2>
+<p>Lisans süresinin telefonun saati değiştirilerek uzatılmasını ya da yanlışlıkla bitmesini önlemek için uygulama, internet varken güncel tarihi öğrenmek amacıyla www.google.com, www.cloudflare.com ve www.apple.com adreslerine kısa bir HTTPS isteği gönderir ve yalnızca yanıttaki tarih bilgisini okur. Bu istekte kişisel veri gönderilmez; her internet bağlantısında olduğu gibi bu sunucular cihazınızın IP adresini görür.</p>
 
 <h2>Kamera ve fotoğraflar</h2>
 <p>"Kameradan oku" özelliği, sizin çektiğiniz ya da seçtiğiniz fotoğraftaki yazıyı Google ML Kit ile <strong>tamamen cihaz üzerinde</strong> okur. Bu özellikte fotoğraf hiçbir yere yüklenmez, saklanmaz ve yalnızca o anki okuma için kullanılır.</p>
@@ -33,9 +44,8 @@
 <h2>Yapay Zekâ Asistanı (Google Gemini)</h2>
 <p>"Yapay Zekâ Asistanı" özelliğini kullandığınızda yazdığınız soru ya da istek, seçtiğiniz kart ve eklediğiniz fotoğraf, cevap üretilmesi için Google Firebase AI Logic üzerinden Google'ın Gemini hizmetine gönderilir. Bu veriler hesabınızla ya da kimliğinizle ilişkilendirilmez; biz bunları saklamayız ve görmeyiz. Google bu verileri <a href="https://ai.google.dev/gemini-api/terms">Gemini API Ek Hizmet Şartları</a> ve <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a> kapsamında işler; ücretsiz hizmet katmanında içerikler Google ürünlerini geliştirmek için kullanılabilir. Bu nedenle asistana kişisel bilgilerinizi (ad, adres, telefon vb.) yazmayın ve kişilerin yüzlerini içeren fotoğraflar göndermeyin. Uygulama, isteklerin gerçek uygulamadan geldiğini doğrulamak için Firebase App Check kullanır. Asistan isteğe bağlıdır; kullanmazsanız hiçbir veri gönderilmez. Uygunsuz bir cevap görürseniz uygulamadaki "Uygunsuz içeriği bildir" düğmesiyle bize bildirebilirsiniz.</p>
 
-<h2>Reklamlar (Google AdMob)</h2>
-<p>Uygulama ücretsizdir ve Google AdMob reklamlarıyla desteklenir. AdMob reklam göstermek, ölçmek ve kötüye kullanımı önlemek için cihazınızdan reklam kimliği, IP adresi, cihaz ve uygulama bilgileri, reklam etkileşimleri gibi verileri toplayabilir. Bu verileri Google işler. Ayrıntılar: <a href="https://policies.google.com/technologies/partner-sites">Google iş ortağı sitelerinde veri kullanımı</a> ve <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a>.</p>
-<p>Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre'deki kullanıcılardan kişiselleştirilmiş reklam için Google'ın izin formuyla onay istenir. Seçiminizi uygulama menüsündeki "Gizlilik ve reklam ayarları" bölümünden değiştirebilirsiniz. Reklam kimliğinizi Android ayarlarından sıfırlayabilir ya da silebilirsiniz.</p>
+<h2>Reklam ve izleme yok</h2>
+<p>Uygulamada reklam yoktur. Reklam ya da analiz SDK'sı içermez, reklam kimliğinizi kullanmaz ve sizi başka uygulamalar ya da web siteleri arasında izlemez.</p>
 
 <h2>Çocuklar</h2>
 <p>Uygulama 13 yaş altındaki çocuklara yönelik değildir ve bilerek çocuklardan veri toplamaz.</p>
@@ -46,12 +56,23 @@
 <hr>
 
 <h1>ElektroKit Privacy Policy</h1>
-<p class="muted">Last updated: 9 November 2026 · Developer: Abiyonik Tech</p>
+<p class="muted">Last updated: 11 November 2026 · Developer: Abiyonik Tech</p>
 
 <p>ElektroKit (<code>com.abiyoniktech.elektrokit</code>) is an Android app for electronics calculations. This page explains what data the app uses and how.</p>
 
 <h2>Data we collect</h2>
-<p>The app has no server operated by us and we do not collect your personal data. There are no accounts, sign-ins or registrations. Only the following is stored <strong>on your device</strong>: the date you first opened the app, daily ad, scan and AI question counters, when an ad-free period ends, your favourite and recent tools, and your theme choice. This never leaves the device and is deleted when you uninstall the app.</p>
+<p>There are no accounts or sign-ins. What the app sends over the internet is listed below ("Usage check-in and remote revocation"); no other data about you is sent to us. Only the following is stored <strong>on your device</strong>: your licence key, the last verified date used for the licence period check, the daily AI question counter, your saved calculations, your favourite and recent tools, and your theme choice. This never leaves the device and is deleted when you uninstall the app.</p>
+
+<h2>Licence and device code</h2>
+<p>ElektroKit is a licensed app. It derives a "device code" from a <strong>one-way hash</strong> of Android's app-specific device identifier (ANDROID_ID) and shows it on screen; the identifier cannot be recovered from the code. To obtain a licence, you send the device code to us yourself (by e-mail, message, etc.).</p>
+<p>When we issue a licence we keep the following in our licence register: the device code, your name and (if given) company/school name, phone number and e-mail address, the licence number, issue and expiry dates, and the authorised person who issued it. These records are used only to manage, renew and support your licence; they are not sold, not used for advertising, and not shared with third parties except where required by law. You can ask us to delete or correct your record at the e-mail address below. The licence itself is verified on the device, offline.</p>
+
+<h2>Usage check-in and remote revocation</h2>
+<p>Each time the licensed app starts and is online, it sends the following to our licence register on Google Firebase (Cloud Firestore, European servers) for licence management: <strong>licence number, device code, app version, first and last launch time and number of launches</strong>. No name, phone number, location, contacts, photos or in-app calculations are sent. This information is used only to see whether a licence is in use, to provide support and to prevent misuse, and is visible only to our authorised licence staff.</p>
+<p>At the same time the app checks whether its licence number has been revoked. A revoked licence (for example after a refund, breach of terms or misuse) stops working once the device is online. Without internet none of this happens and the licence keeps working offline. You can ask us to delete these records at the e-mail address below; check-in records are deleted at the latest 1 year after the licence ends.</p>
+
+<h2>Date verification</h2>
+<p>To prevent the licence period from being extended or ended by changing the phone clock, when online the app sends a short HTTPS request to www.google.com, www.cloudflare.com and www.apple.com and reads only the date in the response. No personal data is sent; as with any internet connection, these servers see your device's IP address.</p>
 
 <h2>Camera and photos</h2>
 <p>The "Scan with camera" feature reads text from a photo you take or choose using Google ML Kit, <strong>entirely on your device</strong>. In this feature the photo is never uploaded or stored and is used only for that one reading.</p>
@@ -59,9 +80,8 @@
 <h2>AI Assistant (Google Gemini)</h2>
 <p>When you use the "AI Assistant", the question or request you type, the board you select and any photo you add are sent through Google Firebase AI Logic to Google's Gemini service to generate an answer. This data is not linked to an account or your identity; we do not store or see it. Google processes it under the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Additional Terms of Service</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>; on the free service tier content may be used to improve Google products. Please do not enter personal information (name, address, phone number, etc.) and do not send photos showing people's faces. The app uses Firebase App Check to verify that requests come from the genuine app. The assistant is optional; if you don't use it, nothing is sent. If you see an inappropriate answer, use the "Report content" button in the app.</p>
 
-<h2>Ads (Google AdMob)</h2>
-<p>The app is free and supported by Google AdMob ads. To serve and measure ads and prevent fraud, AdMob may collect data such as your advertising ID, IP address, device and app information, and ad interactions. This data is processed by Google. Details: <a href="https://policies.google.com/technologies/partner-sites">How Google uses data from partner sites</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
-<p>Users in the EEA, UK and Switzerland are asked for consent to personalised ads through Google's consent form. You can change your choice from "Privacy &amp; ad settings" in the app menu. You can reset or delete your advertising ID in Android settings.</p>
+<h2>No ads, no tracking</h2>
+<p>The app shows no ads. It contains no advertising or analytics SDK, does not use your advertising ID, and does not track you across apps or websites.</p>
 
 <h2>Children</h2>
 <p>The app is not directed at children under 13 and does not knowingly collect data from children.</p>
